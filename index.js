@@ -84,7 +84,7 @@ function cobody(stream) {
 
 module.exports = function(config){
 
-  _.extend(__CONFIG,config)
+  __CONFIG = _.defaultsDeep(config,__CONFIG)
 
   return function *(next){
     //this.path = join(__CONFIG.viewLocation,this.path)
